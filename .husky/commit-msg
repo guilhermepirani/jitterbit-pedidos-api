@@ -1,0 +1,13 @@
+echo '---------------------------------'
+echo 'Iniciando hook de mensagem do commit...\n'
+
+echo '> ⏳ Verificando a estrutura da sua mensagem de commit...\n'
+npx --no-install commitlint --edit "$1" ||
+(
+      echo '< ❌\e[31m A mensagem não segue o padrão de conventional commits. Tente novamente com uma mensagem no padrão. \e[0m \n';
+  exit 1;
+)
+
+echo '< ✅\e[32m O Commitlint validou sua mensagem! \e[0m \n'
+
+exit 0;

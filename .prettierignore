@@ -1,0 +1,13 @@
+# Ignore artifacts:
+build
+coverage
+
+# Ignore dependencies:
+node_modules
+
+# Ignore configuration files:
+.eslint.config.js
+.prettierrc
+.prettierignore
+.husky
+.vscode

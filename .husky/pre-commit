@@ -1,0 +1,20 @@
+echo '---------------------------------'
+echo 'Iniciando hook de pré commit...\n'
+
+echo '> ⏳ Verificando formatação de código com Prettier...\n'
+npx prettier --check . --log-level silent ||
+(
+  echo '< ❌\e[31m O código não segue o padrão de estilo. Por favor, formate o código usando Prettier antes de fazer o commit. \e[0m \n';
+  exit 1;
+)
+echo '< ✅\e[32m O Prettier validou seu código! \e[0m \n'
+
+echo '> ⏳ Verificando erros de lint com ESLint...\n'
+npx eslint . || 
+(
+    echo '< ❌\e[31m Foram encontrados erros pelo ESLint. Por favor, corrija os erros de lint antes de fazer o commit. \e[0m \n';
+    exit 1;
+)
+echo '< ✅\e[32m O ESLint validou seu código! \e[0m \n'
+
+exit 0;

@@ -1,0 +1,41 @@
+{
+  "name": "jitterbit-pedidos-api",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/guilhermepirani/jitterbit-pedidos-api#readme",
+  "bugs": {
+    "url": "https://github.com/guilhermepirani/jitterbit-pedidos-api/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guilhermepirani/jitterbit-pedidos-api.git"
+  },
+  "license": "ISC",
+  "author": "Guilherme Pirani",
+  "type": "module",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "npx prettier --check . --log-level silent",
+    "prettier:fix": "npx prettier --write . --log-level silent",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.4.3",
+    "@commitlint/config-conventional": "^20.4.3",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-config-xo": "^0.50.0",
+    "globals": "^17.4.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.3.2",
+    "prettier": "3.8.1"
+  }
+}
