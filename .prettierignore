@@ -11,3 +11,6 @@ node_modules
 .prettierignore
 .husky
 .vscode
+
+# folders
+storage/migrations/*

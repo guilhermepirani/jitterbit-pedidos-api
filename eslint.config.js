@@ -4,6 +4,12 @@ import eslintConfigPrettier from 'eslint-config-prettier/flat';
 
 export default defineConfig([
   config,
-  globalIgnores(['.husky/', '.vscode/', 'node_modules/', 'package-lock.json']),
+  globalIgnores([
+    '.husky/',
+    '.vscode/',
+    'node_modules/',
+    'package-lock.json',
+    'src/storage/migrations/*',
+  ]),
   eslintConfigPrettier,
 ]);
