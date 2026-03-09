@@ -17,4 +17,12 @@ npx eslint . ||
 )
 echo '< ✅\e[32m O ESLint validou seu código! \e[0m \n'
 
+echo '> ⏳ Executando testes com Jest...\n'
+npm test || 
+(
+    echo '< ❌\e[31m Alguns testes falharam. Corrija os testes antes de fazer o commit. \e[0m \n';
+    exit 1;
+)
+echo '< ✅\e[32m Todos os testes passaram! \e[0m \n'
+
 exit 0;

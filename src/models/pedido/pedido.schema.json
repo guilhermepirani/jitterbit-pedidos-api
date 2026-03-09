@@ -1,0 +1,15 @@
+{
+  "$id": "pedido.schema.json",
+  "type": "object",
+  "required": ["numeroPedido", "valorTotal", "dataCriacao", "items"],
+  "properties": {
+    "numeroPedido": { "type": "string" },
+    "valorTotal": { "type": "number" },
+    "dataCriacao": { "type": "string", "format": "date-time" },
+    "items": {
+      "type": "array",
+      "items": { "$ref": "../item/item.schema.json" }
+    }
+  },
+  "additionalProperties": false
+}

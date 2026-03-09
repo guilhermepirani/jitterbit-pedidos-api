@@ -10,6 +10,16 @@ export default defineConfig([
     'node_modules/',
     'package-lock.json',
     'src/storage/migrations/*',
+    '__tests__/',
   ]),
   eslintConfigPrettier,
+
+  {
+    files: ['**/__tests__/**/*.js', '**/*.test.js'],
+    env: {
+      jest: true,
+      node: true,
+    },
+    rules: {},
+  },
 ]);

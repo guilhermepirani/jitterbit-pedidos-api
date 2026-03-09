@@ -1,0 +1,11 @@
+{
+  "$id": "item.schema.json",
+  "type": "object",
+  "required": ["idItem", "quantidadeItem", "valorItem"],
+  "properties": {
+    "idItem": { "type": "string" },
+    "quantidadeItem": { "type": "number" },
+    "valorItem": { "type": "number" }
+  },
+  "additionalProperties": false
+}
